@@ -58,7 +58,7 @@ namespace STPS.SIRCE.WEB.Controllers
         public JsonResult ConsultarMunicipiosTrabajador(string rawModel)
         {
             JavaScriptSerializer js = new JavaScriptSerializer();
-            var model = js.Deserialize<TrabajadorModel>(rawModel);
+            vardel = js.Deserialize<TrabajadorModel>(rawModel);
             model.ConsultarMunicipiosTrabajador();
             return new JsonResult() { Data = model, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
